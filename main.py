@@ -12,7 +12,7 @@ def main():
 def generateGridMaze(size: int):
     seed = random.randint(-sys.maxsize, sys.maxsize)
     grid = Grid(size, size, seed)
-    Houstons.create(grid)
+    TruePrims.create(grid)
     grid.toPNG()
     print("seed: %d" % seed)
 
