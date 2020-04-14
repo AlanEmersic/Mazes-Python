@@ -13,7 +13,7 @@ class RecursiveDivision:
         RecursiveDivision.divide(0, 0, grid.rows, grid.cols, grid)
 
     @staticmethod
-    def divide(row: int, col: int, height: int, width: int, grid: Grid):
+    def divide(row: int, col: int, height: int, width: int, grid: Grid) -> None:
         # if height <= 1 or width <= 1 or height < 5 and width < 5 and random.randrange(4) == 0:  # for rooms
         if height <= 1 or width <= 1:
             return
@@ -24,7 +24,7 @@ class RecursiveDivision:
             RecursiveDivision.divideVertically(row, col, height, width, grid)
 
     @staticmethod
-    def divideHorizontally(row: int, col: int, height: int, width: int, grid: Grid):
+    def divideHorizontally(row: int, col: int, height: int, width: int, grid: Grid) -> None:
         divideSouthOf = random.randrange(height - 1)
         passageAt = random.randrange(width)
 
@@ -39,7 +39,7 @@ class RecursiveDivision:
         RecursiveDivision.divide(row + divideSouthOf + 1, col, height - divideSouthOf - 1, width, grid)
 
     @staticmethod
-    def divideVertically(row: int, col: int, height: int, width: int, grid: Grid):
+    def divideVertically(row: int, col: int, height: int, width: int, grid: Grid) -> None:
         divideEastOf = random.randrange(width - 1)
         passageAt = random.randrange(height)
 
